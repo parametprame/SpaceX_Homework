@@ -53,7 +53,32 @@ body {
   flex-direction: column;
 }
 
+.textabout{
+  background: rgba(255, 255, 255, 0);
+  display: block;
+  color: #fff;
+}
+
+#aboutspacex {
+  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('./media/spacex_about.jpg');
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#aboutspacex .viewaboutspacex {
+  height: 100vh;
+}
+
 #home .view {
+	height: 100vh;
+}
+
+#aboutspacex .viewaboutspacex {
 	height: 100vh;
 }
 
@@ -64,13 +89,20 @@ body {
 
 @media screen and (min-width: 601px) {
   div.overlay {
-    margin-top: 25%;
-    margin-left: 8%;
+    margin-right: 8%;
     font-weight: bold;
     font-size: 2em;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    margin-bottom: 2%;
+  }
+  
+  div.viewaboutspacex {
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    padding-bottom: 2%;
   }
 }
 
@@ -79,7 +111,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    text-align: right;
     font-size: 2em;
   }
+
+  div.viewaboutspacex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    font-size: 2em;
+    display: flex;
+  }
+  
 }
 

@@ -1,12 +1,15 @@
 import React from "react";
 import '../App.css'
+import SpaceXImg from '../media/spaceX.png'
 
 const Navigation = () => {
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-lg fixed-top navbar-dark" style={{backgroundColor:'black'}}>
         <div className="container">
-          <a className="navbar-brand" href="#" style={{fontWeight: 'bold', fontSize: 28}}>SpaceX</a>
+          <a className="navbar-brand" href="#">
+            <img src={SpaceXImg} loading="lazy" style={{height:'auto', width:'auto', maxWidth:'250px', maxHeight:'60px'}} />
+          </a>
           <button
             className="navbar-toggler"
             type="button"
