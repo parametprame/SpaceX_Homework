@@ -32,7 +32,7 @@ const App = () => {
       <Router>
         <React.Fragment>
           <Navigation />
-          <Route exact path="/Home" exact component={AsyncHome}/>
+          <Route exact path="/" exact component={AsyncHome}/>
           <Route path="/Rocket" exact component={AsyncRocket}/>
           <Route path="/Launches" exact component={AsyncLaunches}/>
         </React.Fragment>
