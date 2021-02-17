@@ -8,7 +8,7 @@ const Navigation = () => {
     <React.Fragment>
       <nav className="navbar navbar-expand-lg fixed-top navbar-dark" style={{backgroundColor:'black'}}>
         <div className="container">
-          <Link to='/' className='navbar-brand'>
+          <Link to='/SpaceX_Homework' className='navbar-brand'>
             <img src={SpaceXImg} loading="lazy" style={{height:'auto', width:'auto', maxWidth:'250px', maxHeight:'60px'}} />
           </Link>
           <button
@@ -25,7 +25,7 @@ const Navigation = () => {
           <div className="collapse navbar-collapse" id="collapseEx2">
             <ul className="navbar-nav ms-auto mb-5 mb-lg-0">
               <li className="nav-item mx-2">
-                <Link className="nav-link " aria-current="page" to="/" style={{fontWeight: 'bold'}}>Home</Link>
+                <Link className="nav-link " aria-current="page" to="/SpaceX_Homework" style={{fontWeight: 'bold'}}>Home</Link>
               </li>
               <li className="nav-item mx-2">
                 <Link className="nav-link " aria-current="page" to="/Rocket" style={{fontWeight: 'bold'}}>Rockets</Link>
