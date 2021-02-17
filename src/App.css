@@ -62,7 +62,7 @@ body {
 }
 
 #aboutspacex {
-  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('./media/spacex_about.jpg');
+  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('https://sv1.picz.in.th/images/2021/02/17/oOtkdQ.jpg');
   height: 100%;
   top: 0;
   left: 0;
@@ -158,3 +158,7 @@ body {
   }
 }
 
+.butonnnn{
+  z-index: 999999999999;
+  background-color: #fff;
+}

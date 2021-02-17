@@ -1,9 +1,9 @@
 import './App.css';
-import React from 'react'
+import React, { lazy, Suspense } from 'react';
 import Navigation from './components/navigation'
 import { BrowserRouter as Router, Route} from "react-router-dom"; 
 import L from 'react-loadable'
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 const Loading  = () => <div>Loading...</div>
 
@@ -32,7 +32,7 @@ const App = () => {
       <Router>
         <React.Fragment>
           <Navigation />
-          <Route path="/Home" exact component={AsyncHome}/>
+          <Route exact path="/Home" exact component={AsyncHome}/>
           <Route path="/Rocket" exact component={AsyncRocket}/>
           <Route path="/Launches" exact component={AsyncLaunches}/>
         </React.Fragment>

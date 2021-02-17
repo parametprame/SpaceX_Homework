@@ -1,15 +1,16 @@
 import React from "react";
 import '../App.css'
 import SpaceXImg from '../media/spaceX.png'
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-lg fixed-top navbar-dark" style={{backgroundColor:'black'}}>
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link to='/Home' className='navbar-brand'>
             <img src={SpaceXImg} loading="lazy" style={{height:'auto', width:'auto', maxWidth:'250px', maxHeight:'60px'}} />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,13 +25,13 @@ const Navigation = () => {
           <div className="collapse navbar-collapse" id="collapseEx2">
             <ul className="navbar-nav ms-auto mb-5 mb-lg-0">
               <li className="nav-item mx-2">
-                <a className="nav-link " aria-current="page" href="/Home" style={{fontWeight: 'bold'}}>Home</a>
+                <Link className="nav-link " aria-current="page" to="/Home" style={{fontWeight: 'bold'}}>Home</Link>
               </li>
               <li className="nav-item mx-2">
-                <a className="nav-link " aria-current="page" href="/Rocket" style={{fontWeight: 'bold'}}>Rockets</a>
+                <Link className="nav-link " aria-current="page" to="/Rocket" style={{fontWeight: 'bold'}}>Rockets</Link>
               </li>
               <li className="nav-item mx-2">
-                <a className="nav-link " href="/Launches" style={{fontWeight: 'bold'}}>Launches</a>
+                <Link className="nav-link " to="/Launches" style={{fontWeight: 'bold'}}>Launches</Link>
               </li>
             </ul>
           </div>
