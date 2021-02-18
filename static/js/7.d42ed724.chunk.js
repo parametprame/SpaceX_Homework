@@ -1,2 +1,0 @@
-(this.webpackJsonpspacexhomework=this.webpackJsonpspacexhomework||[]).push([[7],{70:function(e,c,n){"use strict";n.r(c);var s=n(1),t=n.n(s),r=n(3);c.default=function(){return Object(r.jsx)(t.a.Fragment,{children:Object(r.jsx)("section",{id:"rocket",children:Object(r.jsx)("div",{className:"container",style:{marginTop:"10%"},children:Object(r.jsx)("p",{children:"Launches Page"})})})})}}}]);
-//# sourceMappingURL=7.d42ed724.chunk.js.map
