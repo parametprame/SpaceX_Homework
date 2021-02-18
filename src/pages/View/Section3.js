@@ -42,7 +42,7 @@ const Section3 = () => {
                             <div className='col textabout'>
                                 <p style={{ fontSize: '2em', fontWeight: 'bold' }} data-aos="fade-up">Launches</p>
                                 <h6 data-aos="fade-up">Collect data for testing or launching rockets. Consisting of the name of the mission, the name of the rocket used in that mission And various details</h6>
-                                <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/Rocket'  data-aos="fade-up" ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
+                                <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/Launches'  data-aos="fade-up" ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
                             </div>
                         </div>
                     </div>

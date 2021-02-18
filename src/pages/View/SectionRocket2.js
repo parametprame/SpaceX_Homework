@@ -39,7 +39,7 @@ const SectionRocket2 = () => {
                             <div className='col textabout'>
                                 <p style={{ fontSize: '2em', fontWeight: 'bold' }} >FALCON  1</p>
                                 <h6 >The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.</h6>
-                                <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/Rocket'   ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
+                                <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/RocketDetail'   ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
                             </div>
                         </div>
                         <div className='row row-cols-1  row-cols-md-2' style={{marginTop: "5%"}}>

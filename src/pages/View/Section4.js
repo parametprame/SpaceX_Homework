@@ -17,7 +17,7 @@ const Section4 = () => {
                         <p >Rockets</p>
                         <h6> Collect all of SpaceX's rockets and their descriptions of each rocket. </h6>
                         <h6>Including information on the usage of that rocket</h6>
-                        <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/Rocket'><FontAwesomeIcon icon={faRocket} />{' '} See more</Link>
+                        <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/Rockets'><FontAwesomeIcon icon={faRocket} />{' '} See more</Link>
                     </div>
                 </div>
             </section>

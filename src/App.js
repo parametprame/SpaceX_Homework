@@ -23,6 +23,10 @@ const AsyncRocket = Loadable({
 const AsyncLaunches = Loadable({
   loader: () => import('./pages/Launches')
 })
+const AsyncRocketDetail = Loadable({
+  loader: () => import('./pages/RocketDetail')
+})
+
 
 const queryClient = new QueryClient()
 
@@ -34,6 +38,7 @@ const App = () => {
           <Route exact={true} path="/" exact component={AsyncHome}/>
           <Route path="/Rockets" exact component={AsyncRocket}/>
           <Route path="/Launches" exact component={AsyncLaunches}/>
+          <Route path="/RocketDetail" exact component={AsyncRocketDetail}/>
       </Router>
     </QueryClientProvider>
   );

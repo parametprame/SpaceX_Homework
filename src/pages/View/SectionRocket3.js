@@ -21,9 +21,7 @@ const useStyles = makeStyles({
   });
 
 const SectionRocket3 = () => {
-
     const classes = useStyles();
-
     AOS.init({
         duration: 2000
     })
