@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Section4 = () => {
     return(
         <section id='home'>
-                <div className="view">
+                <div className="view" style={{position: 'relative'}}>
                     <video id="background-video" loop autoPlay muted preload="auto" autobuffer="true" data-mobile-video >
                         <source src={clip} type="video/mp4" />
                         Your browser does not support the video tag.
