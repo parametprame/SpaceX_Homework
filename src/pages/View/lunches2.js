@@ -11,7 +11,7 @@ const Launches2 = () => {
             <section id='lau'>
                 <div className="launches" style={{ display: 'flex', alignItems: 'center' }}>
                     <div className='container'>
-                        <div className='row row-cols-1  row-cols-md-1' data-aos="fade-up">
+                        <div className='row row-cols-1  row-cols-md-1'>
                            <Listlunches />
                         </div>
                     </div>

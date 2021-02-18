@@ -8,6 +8,7 @@ const columns = [
     key: 'flight_number',
     name: 'Fight Name',
     width: 130,
+    resizable: true,
     formatter: ({ row }) => (
       <React.Fragment>
         <div style={{ textAlign: 'center', fontSize: '1em' }}>
@@ -19,6 +20,7 @@ const columns = [
   {
     key: 'mission_name',
     name: 'Mission Name',
+    resizable: true,
     formatter: ({ row }) => (
       <React.Fragment>
         <div style={{ textAlign: 'center', fontSize: '1em' }}>
@@ -30,6 +32,7 @@ const columns = [
   {
     key: 'launch_year',
     name: 'Launch Year',
+    resizable: true,
     formatter: ({ row }) => (
       <React.Fragment>
         <div style={{ textAlign: 'center', fontSize: '1em' }}>
@@ -41,6 +44,7 @@ const columns = [
   {
     key: 'launch_success',
     name: 'Launch Success',
+    resizable: true,
     formatter: ({ row }) => (
       <React.Fragment>
         <div style={{ textAlign: 'center', fontWeight: 'bold', display: 'flex', justifyContent:'center' }}>

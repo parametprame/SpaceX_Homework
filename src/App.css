@@ -160,8 +160,8 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
-
 }
+
 #aboutrocket .viewaboutrocket {
 	height: 100vh;
 }
@@ -199,7 +199,7 @@ body {
     font-weight: bold;
     font-size: 2em;
   }
-  div.viewaboutDetail {
+  /* div.viewaboutDetail { */
 
   div.viewaluanches{
     font-weight: bold;
@@ -246,14 +246,20 @@ body {
     text-align: center;
     
   }
-
   div.viewaluanches{
     font-weight: bold;
     font-size: 2em;
     display: flex;
     align-items: center;
   }
-
+  div.viewaboutrocket{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    font-size: 2em;
+    display: flex;
+  }
 }
 
 .inactive {

@@ -11,14 +11,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const useStyles = makeStyles({
     button: {
-      margin: '0.1em',
-      zIndex: 2,
-      color: 'orange',
-      borderColor: 'orange',
-      marginTop: '2vh',
-      height: '6vh'
+        margin: '0.1em',
+        zIndex: 2,
+        color: 'orange',
+        borderColor: 'orange',
+        marginTop: '2vh',
+        height: '6vh'
     },
-  });
+});
 
 const SectionRocket2 = () => {
 
@@ -27,14 +27,14 @@ const SectionRocket2 = () => {
     AOS.init({
         duration: 2000
     })
-    return(
+    return (
         <React.Fragment>
-             <section id='lau'>
+            <section id='lau'>
                 <div className="launches" style={{ display: 'flex', alignItems: 'center' }}>
-                    <div className='container' data-aos="fade-up">
-                        <div className='row row-cols-1  row-cols-md-2' >
+                    <div className='container'>
+                        <div className='row row-cols-1  row-cols-md-2' data-aos="fade-up">
                             <div className='col' >
-                            <img src="https:i.ytimg.com/vi/oFQQjthZfA4/maxresdefault.jpg" alt="Avatar" className="imageTop" class="img-fluid rounded"></img>
+                                <img src="https:i.ytimg.com/vi/oFQQjthZfA4/maxresdefault.jpg" alt="Avatar" className="imageTop" class="img-fluid rounded"></img>
                             </div>
                             <div className='col textabout'>
                                 <p style={{ fontSize: '2em', fontWeight: 'bold' }} >FALCON  1</p>
@@ -42,9 +42,15 @@ const SectionRocket2 = () => {
                                 <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/RocketDetail'   ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
                             </div>
                         </div>
-                        <div className='row row-cols-1  row-cols-md-2' style={{marginTop: "5%"}}>
+                    </div>
+                </div>
+            </section>
+            <section id='lau'>
+                <div className="launches" style={{ display: 'flex', alignItems: 'center' }}>
+                    <div className='container'>
+                        <div className='row row-cols-1  row-cols-md-2' data-aos="fade-up">
                             <div className='col' >
-                            <img src="https://cnet3.cbsistatic.com/img/hw-r4jFpdqaFotM6vYXIc0IQ8jQ=/1200x675/2020/07/13/0be85427-bec6-4d86-b94a-fd6df0f463ae/49956396622-84891c5192-3k.jpg" alt="Avatar" className="imageTop" class="img-fluid rounded"></img>
+                                <img src="https://cnet3.cbsistatic.com/img/hw-r4jFpdqaFotM6vYXIc0IQ8jQ=/1200x675/2020/07/13/0be85427-bec6-4d86-b94a-fd6df0f463ae/49956396622-84891c5192-3k.jpg" alt="Avatar" className="imageTop" class="img-fluid rounded"></img>
                             </div>
                             <div className='col textabout'>
                                 <p style={{ fontSize: '2em', fontWeight: 'bold' }} >FALCON 9</p>
@@ -52,9 +58,7 @@ const SectionRocket2 = () => {
                                 <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/Rocket'   ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
                             </div>
                         </div>
-                        
                     </div>
-                    
                 </div>
             </section>
         </React.Fragment>
