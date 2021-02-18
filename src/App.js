@@ -30,12 +30,10 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        <React.Fragment>
           <Navigation />
           <Route exact={true} path="/" exact component={AsyncHome}/>
           <Route path="/Rockets" exact component={AsyncRocket}/>
           <Route path="/Launches" exact component={AsyncLaunches}/>
-        </React.Fragment>
       </Router>
     </QueryClientProvider>
   );

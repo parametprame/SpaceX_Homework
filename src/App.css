@@ -66,14 +66,12 @@ body {
 }
 
 #aboutspacex {
-  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('https://sv1.picz.in.th/images/2021/02/17/oOtkdQ.jpg');
-  height: 100%;
-  top: 0;
-  left: 0;
-  width: 100%;
+  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('https://media.discordapp.net/attachments/453542849573814282/811878985306341426/145a4477029515.5c7bcf54cc7f2.png');
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  width: 100%;
+
 }
 
 #ceocto {
@@ -117,6 +115,8 @@ body {
   text-align: center;
 }
 
+
+
 @media screen and (min-width: 601px) {
   div.overlay {
     margin-left: 8%;
@@ -158,5 +158,37 @@ body {
   div.textabout {
     text-align: center;
   }
+
+}
+
+.inactive {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bolder;
+  display: inline-block;
+}
+
+.inactive::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: orange;
+    transition: width .3s;
+}
+
+.inactive:hover::after {
+  width: 100%;
+}
+
+.inactive:hover {
+  color:orange;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.active {
+  color: orange;
+  text-decoration:none;
 }
 

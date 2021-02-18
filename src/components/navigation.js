@@ -1,44 +1,33 @@
 import React from "react";
 import '../App.css'
 import SpaceXImg from '../media/spaceX.png'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Button, Container, Navbar, Nav} from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRocket, faUserAstronaut, faSpaceShuttle } from '@fortawesome/free-solid-svg-icons'
+
 
 const Navigation = () => {
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-lg fixed-top navbar-dark" style={{backgroundColor:'black'}}>
-        <div className="container">
-          <Link to='/' className='navbar-brand'>
-            <img src={SpaceXImg} loading="lazy" style={{height:'auto', width:'auto', maxWidth:'250px', maxHeight:'60px'}} />
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i className="fas fa-bars"></i>
-          </button>
-          <div className="collapse navbar-collapse" id="collapseEx2">
-            <ul className="navbar-nav ms-auto mb-5 mb-lg-0">
-              <li className="nav-item active">
-                <Link className="nav-link " aria-current="page" to="/" style={{fontWeight: 'bold'}}>Home</Link>
-              </li>
-              <li className="nav-item mx-2">
-                <Link className="nav-link " aria-current="page" to="/Rockets" style={{fontWeight: 'bold'}}>Rockets</Link>
-              </li>
-              <li className="nav-item mx-2">
-                <Link className="nav-link " to="/Launches" style={{fontWeight: 'bold'}}>Launches</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar style={{ backgroundColor: "black" }} expand="lg" variant="dark" fixed='top'>
+        <Container>
+            <Navbar.Brand href="/">
+              <img src={SpaceXImg} loading="lazy" style={{height:'auto', width:'auto', maxWidth:'250px', maxHeight:'60px'}} />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto mr-5">
+                <NavLink exact to="/" className="inactive mx-2" activeClassName="active mx-2"><FontAwesomeIcon icon={faUserAstronaut} />{' '}Home</NavLink>
+                <NavLink to="/Rockets" className="inactive mx-2" activeClassName="active mx-2"><FontAwesomeIcon icon={faRocket} />{' '}Rockets</NavLink>
+                <NavLink to="/Launches" className="inactive mx-2" activeClassName="active mx-2"><FontAwesomeIcon icon={faSpaceShuttle} />{' '}Launches</NavLink>
+              </Nav>
+            </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </React.Fragment >
   );
 };
 
-export default Navigation;
+export default Navigation

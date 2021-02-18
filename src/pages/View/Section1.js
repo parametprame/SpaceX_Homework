@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery } from 'react-query'
 import AOS from 'aos';
-import { makeStyles } from '@material-ui/core'
+import {Container} from 'react-bootstrap';
 
 const Section1 = () => {
     const { isLoading, error, data } = useQuery('repoData', () =>
@@ -22,7 +22,7 @@ const Section1 = () => {
         <React.Fragment>
             <section id='aboutspacex'>
                 <div className="viewaboutspacex">
-                    <div className='container '>
+                    <Container>
                         <div className='textabout' data-aos="fade-up">
                             <p>{data.name}</p>
                             <h6>SpaceX designs, manufactures and launches advanced rockets and spacecraft.</h6>
@@ -30,7 +30,7 @@ const Section1 = () => {
                             <h6>with the ultimate goal of enabling people to live on other planets.</h6>
                             <h6>Founded: {data.founded} Founder: {data.founder}</h6>
                         </div>
-                    </div>
+                    </Container>
                 </div>
             </section>
         </React.Fragment>
