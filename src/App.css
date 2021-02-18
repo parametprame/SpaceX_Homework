@@ -64,18 +64,7 @@ body {
   display: block;
   color: #fff;
 }
-.textabsolute{
-  background: rgba(255, 255, 255, 0);
-  display: block;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+
 
 
 
