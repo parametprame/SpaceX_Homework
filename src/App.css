@@ -102,6 +102,7 @@ body {
   width: 100%;
 }
 
+
 #luanches1 .viewaluanches1 {
   height: 100vh;
 }
@@ -131,24 +132,50 @@ body {
   height: 100vh;
 }
 
-#aboutspacex .viewaboutspacex {
-  height: 100vh;
-}
+
 
 #home .view {
 	height: 100vh;
 }
 
-#aboutspacex .viewaboutspacex {
-	height: 100vh;
-}
+
 
 #home , .title{
   font-weight:100;
   text-align: center;
 }
+#aboutspacex {
+  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('https://media.discordapp.net/attachments/453542849573814282/811878985306341426/145a4477029515.5c7bcf54cc7f2.png');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
 
+}#aboutspacex .viewaboutspacex {
+	height: 100vh;
+}
+#aboutrocket {
+  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('https://www.spacex.com/static/images/falcon-heavy/FH_10.webp');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
 
+}
+#aboutrocket .viewaboutrocket {
+	height: 100vh;
+}
+#aboutDetail {
+  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('https://www.spacex.com/static/images/falcon-9/F9_1.webp');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+
+}
+#aboutDetail .viewaboutDetail {
+	height: 100vh;
+}
 
 @media screen and (min-width: 601px) {
   div.overlay {
@@ -164,6 +191,16 @@ body {
     font-weight: bold;
     font-size: 2em;
   }
+  div.viewaboutrocket {
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    padding-bottom: 2%;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  div.viewaboutDetail {
+
   div.viewaluanches{
     font-weight: bold;
     font-size: 2em;
@@ -207,6 +244,7 @@ body {
   }
   div.textabout {
     text-align: center;
+    
   }
 
   div.viewaluanches{
@@ -248,4 +286,83 @@ body {
   color: orange;
   text-decoration:none;
 }
+
+
+
+
+/* rocketcss */
+/* Slide in Overlay from the Top */
+/* .containerTop {
+  position: relative;
+  width: 100%;
+}
+.imageTop {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.textTop {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.overlayTop {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.containerTop:hover .overlayTop {
+  bottom: 0;
+  height: 100%;
+} */
+
+/* Slide in Overlay from the Bottom */
+/* .containerBottom  {
+  position: relative;
+  width: 100%;
+}
+.imageBottom  {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.textBottom  {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.overlayBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+.containerBottom:hover .overlayBottom {
+  height: 100%;
+} */
+
 

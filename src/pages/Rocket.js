@@ -1,14 +1,18 @@
-import React from 'react'
 
+import React, { lazy, Suspense } from 'react';
+const SectionRocket1 = lazy(() => import('./View/SectionRocket1'))
+const SectionRocket2 = lazy(() => import('./View/SectionRocket2'))
+const SectionRocket3 = lazy(() => import('./View/SectionRocket3'))
 
 const Rocketpage = () => {
+    
     return (
-        <React.Fragment>
-            <section id='rocket'>
-                <div className='container' style={{marginTop: '10%'}}>
-                    <p style={{zIndex: 1}}>Rocket Page</p>
-                </div>
-            </section>
+        <React.Fragment style={{top: 0}}>
+            <Suspense fallback={<h1>Still Loading…</h1>}>
+                <SectionRocket1 /> 
+                <SectionRocket2 />
+                <SectionRocket3 />
+            </Suspense>
         </React.Fragment>
     )
 }
