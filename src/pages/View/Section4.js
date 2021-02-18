@@ -13,7 +13,7 @@ const Section4 = () => {
                         <source src={clip} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                    <div className="overlay" >
+                    <div className="overlay" style={{fontSize: '2em', fontWeight: 'bold'}}>
                         <p >Rockets</p>
                         <h6> Collect all of SpaceX's rockets and their descriptions of each rocket. </h6>
                         <h6>Including information on the usage of that rocket</h6>
