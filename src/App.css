@@ -37,7 +37,6 @@ body {
   margin: 0, auto;
   object-fit: cover;
   z-index: 0;
-  /* vertical-align: middle; */
 }
 
 
@@ -65,7 +64,48 @@ body {
   color: #fff;
 }
 
+.textluanches{
+  background: rgba(255, 255, 255, 0);
+  display: block;
+  color: #fff;
+  text-align: center;
+}
 
+#aboutspacex {
+  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('https://media.discordapp.net/attachments/453542849573814282/811878985306341426/145a4477029515.5c7bcf54cc7f2.png');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+#luanches {
+  background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('https://www.spacex.com/static/images/backgrounds-new/SN9_Desktop_v2.webp');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+#luanches .viewaluanches {
+  height: 100vh;
+}
+
+
+
+#luanches .viewaluanches {
+  height: 100vh;
+}
+
+#luanches1 {
+  background-color: black;
+  width: 100%;
+}
+
+
+#luanches1 .viewaluanches1 {
+  height: 100vh;
+}
 
 
 #ceocto {
@@ -160,6 +200,16 @@ body {
     font-size: 2em;
   }
   div.viewaboutDetail {
+
+  div.viewaluanches{
+    font-weight: bold;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    letter-spacing: 20px;
+  }
+
+  div.viewaluanches1{
     justify-content: flex-end;
     align-items: flex-end;
     display: flex;
@@ -167,6 +217,7 @@ body {
     font-weight: bold;
     font-size: 2em;
   }
+
   div.ceo{
     display: flex;
     align-items: center;
@@ -194,6 +245,13 @@ body {
   div.textabout {
     text-align: center;
     
+  }
+
+  div.viewaluanches{
+    font-weight: bold;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
   }
 
 }

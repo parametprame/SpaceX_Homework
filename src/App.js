@@ -33,7 +33,7 @@ const queryClient = new QueryClient()
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router>
+      <Router basename="/SpaceX_Homework">
           <Navigation />
           <Route exact={true} path="/" exact component={AsyncHome}/>
           <Route path="/Rockets" exact component={AsyncRocket}/>
