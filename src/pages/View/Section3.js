@@ -3,27 +3,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import clip2 from '../../media/cut_launches.mp4'
 import { Link } from "react-router-dom";
-import { Button, makeStyles } from '@material-ui/core'
 import { faRocket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
-
-const useStyles = makeStyles({
-    button: {
-      margin: '0.1em',
-      zIndex: 2,
-      color: 'orange',
-      borderColor: 'orange',
-      marginTop: '2vh',
-      height: '6vh'
-    },
-  });
-
 const Section3 = () => {
-
-    const classes = useStyles();
-
     AOS.init({
         duration: 2000
     })
@@ -42,7 +25,7 @@ const Section3 = () => {
                             <div className='col textabout'>
                                 <p style={{ fontSize: '2em', fontWeight: 'bold' }} data-aos="fade-up">Launches</p>
                                 <h6 data-aos="fade-up">Collect data for testing or launching rockets. Consisting of the name of the mission, the name of the rocket used in that mission And various details</h6>
-                                <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/Rocket'  data-aos="fade-up" ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
+                                <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/Launches'  data-aos="fade-up" ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,7 @@ const Section4 = lazy(() => import('./View/Section4'))
 const Homepage = () => {
 
     return (
-        <React.Fragment style={{top: 0}}>
+        <React.Fragment >
             <Suspense fallback={<h1>Still Loading…</h1>}>
                 <Section1 />
                 <Section3 />
