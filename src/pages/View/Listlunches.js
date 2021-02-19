@@ -1,7 +1,7 @@
 import DataGrid from 'react-data-grid';
 import React from 'react'
 import { useQuery } from 'react-query';
-import {Chip} from '@material-ui/core';
+import { Chip } from '@material-ui/core';
 
 const columns = [
   {
@@ -47,9 +47,9 @@ const columns = [
     resizable: true,
     formatter: ({ row }) => (
       <React.Fragment>
-        <div style={{ textAlign: 'center', fontWeight: 'bold', display: 'flex', justifyContent:'center' }}>
-          {row.launch_success === 'true' ? (<Chip label={row.launch_success}  variant="outlined" color='secondary' style={{color: 'green',  borderColor:'green', width: '10vw'}}/> ) 
-          : (<Chip label={row.launch_success} variant="outlined"  style={{color: 'red', borderColor:'red', width: 100}} />)}
+        <div style={{ textAlign: 'center', fontWeight: 'bold', display: 'flex', justifyContent: 'center' }}>
+          {row.launch_success === 'true' ? (<Chip label={row.launch_success} variant="outlined" color='secondary' style={{ color: 'green', borderColor: 'green', width: '10vw' }} />)
+            : (<Chip label={row.launch_success} variant="outlined" style={{ color: 'red', borderColor: 'red', width: 100 }} />)}
         </div>
       </React.Fragment>
     ),
@@ -79,12 +79,15 @@ const ListLuanches = () => {
 
   return (
     <React.Fragment>
+      
       <DataGrid
         columns={columns}
         rows={datalist}
         style={{ height: '80vh', textAlign: 'center' }}
         enableCellSelect={true}
       />
+      
+      
     </React.Fragment>
   )
 }
