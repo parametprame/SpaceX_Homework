@@ -70,6 +70,12 @@ body {
   color: #fff;
   text-align: center;
 }
+.textrocket{
+  background: rgba(255, 255, 255, 0);
+  display: block;
+  color: #fff;
+  text-align: center;
+}
 
 #aboutspacex {
   background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('https://media.discordapp.net/attachments/453542849573814282/811878985306341426/145a4477029515.5c7bcf54cc7f2.png');
@@ -123,6 +129,33 @@ body {
   left: 0;
   width: 100%
 }
+#lau .launches{
+  height: 100vh;
+}
+
+
+
+
+
+
+#det {
+  background-color: rgb(0, 0, 0);
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%
+}
+#det .detail{
+  height: 100vh;
+}
+
+
+
+.textdet{
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+}
 
 #lau .launches{
   height: 100vh;
@@ -162,6 +195,7 @@ body {
   width: 100%;
 }
 
+
 #aboutrocket .viewaboutrocket {
 	height: 100vh;
 }
@@ -182,7 +216,7 @@ body {
     margin-left: 8%;
     margin-bottom: 2%;
   }
-  
+
   div.viewaboutspacex {
     justify-content: flex-end;
     align-items: flex-end;
@@ -201,6 +235,30 @@ body {
   }
   /* div.viewaboutDetail { */
 
+  div.viewaboutrocket{
+    font-weight: bold;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    letter-spacing: 20px;
+  }
+  div.viewaboutDetail {
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+    padding-bottom: 2%;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  /* div.viewaboutDetail { */
+
+  div.viewaboutDetail{
+    font-weight: bold;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    letter-spacing: 20px;
+  }
   div.viewaluanches{
     font-weight: bold;
     font-size: 2em;
@@ -208,7 +266,6 @@ body {
     align-items: center;
     letter-spacing: 20px;
   }
-
   div.viewaluanches1{
     justify-content: flex-end;
     align-items: flex-end;

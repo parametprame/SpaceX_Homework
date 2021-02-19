@@ -8,11 +8,9 @@ const SectionRocket1 = () => {
         <section id='aboutrocket'>
                 <div className="viewaboutrocket">
                     <Container>
-                        <div className='textabout'>
-                            <p>Rocket</p>
-                            <h6>SpaceX designs, manufactures and launches advanced rockets and spacecraft.</h6>
-                            <h6>The company was founded in 2002 to revolutionize space technology,</h6>
-                            <h6>with the ultimate goal of enabling people to live on other planets.</h6>
+                        <div className='textrocket' data-aos="fade-up">
+                            <p>ROCKETS</p>
+                            
                         </div>
                     </Container>
                 </div>
