@@ -1,7 +1,7 @@
 import React from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import clip2 from '../../media/cut_launches.mp4'
+import clip2 from '../media/cut_launches.mp4'
 import { Link } from "react-router-dom";
 import { faRocket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

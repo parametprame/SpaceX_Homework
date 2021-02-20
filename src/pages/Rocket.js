@@ -1,14 +1,15 @@
 import { useQuery } from 'react-query';
-import React, { lazy, Suspense, useState } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Link } from "react-router-dom";
 import { faRocket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import NotFound from '../components/404'
 
-const SectionRocket1 = lazy(() => import('./View/SectionRocket1'))
+const SectionRocket1 = lazy(() => import('../View/SectionRocket1'))
 
 const Rocketpage = () => {
-    
-    const { isLoading, error, data } = useQuery('repoData', () =>
+
+    const { isLoading, error, data } = useQuery(['Falcon 9', 2], () =>
         fetch('https://api.spacexdata.com/v3/rockets').then(res =>
             res.json()
         )
@@ -17,7 +18,6 @@ const Rocketpage = () => {
     if (isLoading) return 'Loading...'
 
     if (error) return 'An error has occurred: ' + error.message
-
     const RenderRocket = () => {
         console.log(data)
         const image = [
@@ -28,7 +28,7 @@ const Rocketpage = () => {
         ]
         return (
             <React.Fragment>
-                {data.map((data, index) => {
+                {Array.isArray(data) ? data.map((data, index) => {
                     return (
                         <section id='lau'>
                             <div className="launches" style={{ display: 'flex', alignItems: 'center' }}>
@@ -40,14 +40,14 @@ const Rocketpage = () => {
                                         <div className='col textabout'>
                                             <p style={{ fontSize: '2em', fontWeight: 'bold' }} >{data.rocket_name} </p>
                                             <h6 >{data.description}</h6>
-                                            <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to='/RocketDetail'   ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
+                                            <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to={{pathname: `/Rockets/detail/${data.rocket_id}`}}  ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
                     )
-                })}
+                }) : <NotFound/>}
             </React.Fragment>
         )
     }

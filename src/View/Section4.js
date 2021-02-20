@@ -1,5 +1,5 @@
 import React from 'react'
-import clip from '../../media/cut_rocket.mp4'
+import clip from '../media/cut_rocket.mp4'
 import 'aos/dist/aos.css';
 import { Link } from "react-router-dom";
 import { faRocket } from '@fortawesome/free-solid-svg-icons'

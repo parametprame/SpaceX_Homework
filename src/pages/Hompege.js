@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 
-const Section1 = lazy(() => import('./View/Section1'))
-const Section3 = lazy(() => import('./View/Section3'))
-const Section4 = lazy(() => import('./View/Section4'))
+const Section1 = lazy(() => import('../View/Section1'))
+const Section3 = lazy(() => import('../View/Section3'))
+const Section4 = lazy(() => import('../View/Section4'))
 
 
 const Homepage = () => {

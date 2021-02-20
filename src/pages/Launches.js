@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 
-const Launches1 = lazy(() => import('./View/lunches1'))
-const Launches2 = lazy(() => import('./View/lunches2'))
-const Launches3 = lazy(() => import('./View/lunches3'))
+const Launches1 = lazy(() => import('../View/lunches1'))
+const Launches2 = lazy(() => import('../View/lunches2'))
+const Launches3 = lazy(() => import('../View/lunches3'))
 
 const LaunchesPage = () => {
     return (

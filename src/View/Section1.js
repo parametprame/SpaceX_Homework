@@ -9,9 +9,8 @@ const Section1 = () => {
             res.json()
         )
     )
-
+    
     if (isLoading) return 'Loading...'
-
     if (error) return 'An error has occurred: ' + error.message
 
     AOS.init({
@@ -23,7 +22,7 @@ const Section1 = () => {
             <section id='aboutspacex'>sq3
                 <div className="viewaboutspacex">
                     <Container>
-                        <div className='textabout' data-aos="fade-up">
+                        <div className='textabout'>
                             <p>{data.name}</p>
                             <h6>SpaceX designs, manufactures and launches advanced rockets and spacecraft.</h6>
                             <h6>The company was founded in 2002 to revolutionize space technology,</h6>
