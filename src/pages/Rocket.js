@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NotFound from '../components/404'
 
 const SectionRocket1 = lazy(() => import('../View/SectionRocket1'))
+const SectionRocket2 = lazy(() => import('../View/SectionRocket2'))
 
 const Rocketpage = () => {
 
@@ -54,6 +55,7 @@ const Rocketpage = () => {
     return (
         <React.Fragment style={{ top: 0 }}>
             <Suspense fallback={<h1>Still Loading…</h1>}>
+                <SectionRocket2/>
                 <SectionRocket1 />
                 {RenderRocket()}
             </Suspense>

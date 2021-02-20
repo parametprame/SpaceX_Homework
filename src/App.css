@@ -151,10 +151,15 @@ body {
 
 
 
+.textdet1{
+  font-size: 1em;
+  font-weight: bold;
+  color: rgb(2, 2, 2);
+}
 .textdet{
   font-size: 1em;
   font-weight: bold;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 #lau .launches{
