@@ -19,7 +19,7 @@ const Rocketpage = () => {
     if (error) return 'An error has occurred: ' + error.message
     const RenderRocket = () => {
         const image = [
-            "https:i.ytimg.com/vi/oFQQjthZfA4/maxresdefault.jpg",
+            "https://assets.newatlas.com/dims4/default/e94824c/2147483647/strip/true/crop/899x599+1+0/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F3a%2F05%2F3429130d417982098cdb6b2cdebd%2Fejiid7xwoai3pry.jpg",
             "https://cnet3.cbsistatic.com/img/hw-r4jFpdqaFotM6vYXIc0IQ8jQ=/1200x675/2020/07/13/0be85427-bec6-4d86-b94a-fd6df0f463ae/49956396622-84891c5192-3k.jpg",
             "https://www.teslarati.com/wp-content/uploads/2019/04/Falcon-Heavy-Flight-2-liftoff-Pauline-Acalin-6-2-c.jpg",
             "https://cdn.arstechnica.net/wp-content/uploads/2020/12/Starship-SN8-Dec-9-2020-0927.jpg"
@@ -33,7 +33,7 @@ const Rocketpage = () => {
                                 <div className='container'>
                                     <div className='row row-cols-1  row-cols-md-2' >
                                         <div className='col' >
-                                            <img src={image[index]} alt="Avatar" className="imageTop" class="img-fluid rounded"></img>
+                                            <img src={image[index]} alt="rocker" className="imageTop" class="img-fluid rounded"></img>
                                         </div>
                                         <div className='col textabout'>
                                             <p style={{ fontSize: '2em', fontWeight: 'bold' }} >{data.rocket_name} </p>
