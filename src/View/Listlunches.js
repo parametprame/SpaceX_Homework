@@ -1,20 +1,23 @@
-import * as React from 'react';
-import { buildRowParams, DataGrid } from '@material-ui/data-grid';
+import React from 'react';
+import { DataGrid } from '@material-ui/data-grid';
 import { useQuery } from 'react-query';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import {
+  CircularProgress,
+} from '@material-ui/core';
+import DialogDetail from '../components/Dialogdetail'
 
 const columns = [
-  { 
-    field: 'id', 
-    headerName: 'Fight Number', 
+  {
+    field: 'id',
+    headerName: 'Fight Number',
     flex: 1,
     headerAlign: 'center',
     align: 'center',
     sortable: false,
   },
-  { 
-    field: 'mission_name', 
-    headerName: 'Mission Name', 
+  {
+    field: 'mission_name',
+    headerName: 'Mission Name',
     flex: 1,
     headerAlign: 'center',
     align: 'center'
@@ -38,25 +41,32 @@ const columns = [
   },
 ];
 
-
 export default function Listlunches() {
   
+
   const datalist = []
+
   const { isLoading, error, data } = useQuery('repoData', () =>
     fetch('https://api.spacexdata.com/v3/launches').then(res =>
       res.json()
     )
   )
+
   if (isLoading) return <CircularProgress color="secondary" />
+
   if (error) return 'An error has occurred: ' + error.message
-  for (let i = 0; i < data.length ; i++) {
+
+  for (let i = 0; i < data.length; i++) {
+
     let number = data[i].flight_number.toString();
+
     datalist.push({
       id: number,
       mission_name: data[i].mission_name,
       launch_year: data[i].launch_year,
       launch_success: `${data[i].launch_success}`
     })
+
   }
 
   const handleClick = (e) => {
@@ -64,14 +74,16 @@ export default function Listlunches() {
   }
 
   return (
-    <div style={{ height: '80vh', width: '100%', backgroundColor:'white', }} >
-      <DataGrid
-        rows={datalist} 
-        columns={columns} 
-        autoPageSize 
-        pagination
-        onRowClick={handleClick}
-      />
-    </div>
+    <React.Fragment>
+      <div style={{ height: '80vh', width: '100%', backgroundColor: 'white', }} >
+        <DataGrid
+          rows={datalist}
+          columns={columns}
+          autoPageSize
+          pagination
+          onRowClick={handleClick}
+        />
+      </div>
+    </React.Fragment>
   );
 }

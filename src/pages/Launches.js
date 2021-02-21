@@ -10,7 +10,7 @@ const LaunchesPage = () => {
             <Suspense fallback={<h1>Still Loading…</h1>}>
                 <Launches1 />
                 <Launches2 />
-                <Launches3 />
+                {/* <Launches3 /> */}
             </Suspense>
         </React.Fragment>
     )
