@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import { useQuery } from 'react-query';
 import {
   CircularProgress,
+  makeStyles
 } from '@material-ui/core';
-import DialogDetail from '../components/Dialogdetail'
+import Dialogdetail from '../components/Dialogdetail'
 
 const columns = [
   {
@@ -41,49 +42,74 @@ const columns = [
   },
 ];
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& div.MuiDataGrid-cell" :{
+      color:'white'
+    },
+    "& div.MuiDataGrid-colCellTitle":{
+      color: 'white'
+    },
+    "& div.MuiToolbar-root":  {
+      color: 'white'
+    },
+    "& div.MuiTablePagination-actions":{
+      color: 'white'
+    }
+  }
+}));
 export default function Listlunches() {
-  
 
-  const datalist = []
+  const classes = useStyles();
 
-  const { isLoading, error, data } = useQuery('repoData', () =>
+  const [selected, setSelected] = useState(null)
+
+  const { isLoading, error, data } = useQuery('Listlaunches', () =>
     fetch('https://api.spacexdata.com/v3/launches').then(res =>
       res.json()
     )
   )
 
-  if (isLoading) return <CircularProgress color="secondary" />
+  if (isLoading) {
+    return (
+      <div style={{ textAlign: 'center' }}>
+        <CircularProgress color="secondary" />
+      </div>
+    )
+  }
 
   if (error) return 'An error has occurred: ' + error.message
 
-  for (let i = 0; i < data.length; i++) {
-
-    let number = data[i].flight_number.toString();
-
-    datalist.push({
-      id: number,
-      mission_name: data[i].mission_name,
-      launch_year: data[i].launch_year,
-      launch_success: `${data[i].launch_success}`
-    })
-
-  }
 
   const handleClick = (e) => {
-    const row = datalist.filter((r) => r.id === e.row.id)
+    setSelected(e.row)
+  }
+
+  const handleClose = () => {
+    setSelected(null)
   }
 
   return (
     <React.Fragment>
-      <div style={{ height: '80vh', width: '100%', backgroundColor: 'white', }} >
+      <div style={{ height: '80vh', width: '100%', backgroundColor:'black' }} className={classes.root}>
         <DataGrid
-          rows={datalist}
+          rows={Array.isArray(data) ?
+            data.map((item) => ({
+              id: item.flight_number.toString(),
+              mission_name: item.mission_name,
+              launch_year: item.launch_year,
+              launch_success: `${item.launch_success}`
+            })) :
+            []
+          }
           columns={columns}
-          autoPageSize
           pagination
+          pageSize={10}
           onRowClick={handleClick}
         />
       </div>
+      {selected ? (<Dialogdetail mission={selected} onClose={handleClose} />) : null}
+
     </React.Fragment>
   );
 }

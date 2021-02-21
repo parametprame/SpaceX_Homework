@@ -17,7 +17,7 @@ const Section3 = () => {
                     <div className='container'>
                         <div className='row row-cols-1  row-cols-md-2' >
                             <div className='col' data-aos="fade-up">
-                                <video id="background-video" loop autoPlay muted preload="auto" autobuffer="true" data-mobile-video >
+                                <video id="background-video" loop autoPlay muted preload="auto" autobuffer="true" >
                                     <source src={clip2} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>

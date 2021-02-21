@@ -3,8 +3,6 @@ import React from 'react'
 import { useQuery } from 'react-query';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRocket } from '@fortawesome/free-solid-svg-icons'
-import { Link } from "react-router-dom";
-
 
 const SectionRocket2 = (props) => {
     const rocket_id = props.data

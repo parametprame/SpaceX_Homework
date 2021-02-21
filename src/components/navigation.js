@@ -1,8 +1,8 @@
 import React from "react";
 import '../App.css'
 import SpaceXImg from '../media/spaceX.png'
-import { NavLink } from "react-router-dom";
-import { Button, Container, Navbar, Nav} from 'react-bootstrap';
+import { Link, NavLink } from "react-router-dom";
+import { Container, Navbar, Nav} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRocket, faUserAstronaut, faSpaceShuttle } from '@fortawesome/free-solid-svg-icons'
@@ -13,9 +13,9 @@ const Navigation = () => {
     <React.Fragment>
       <Navbar style={{ backgroundColor: "black" }} expand="lg" variant="dark" fixed='top'>
         <Container>
-            <Navbar.Brand href="/">
+            <Link to="/">
               <img src={SpaceXImg} loading="lazy" style={{height:'auto', width:'auto', maxWidth:'250px', maxHeight:'60px'}} />
-            </Navbar.Brand>
+            </Link>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto mr-5">
