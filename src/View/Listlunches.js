@@ -48,13 +48,19 @@ const useStyles = makeStyles((theme) => ({
       color:'white'
     },
     "& div.MuiDataGrid-colCellTitle":{
-      color: 'white'
+      color: 'black'
     },
     "& div.MuiToolbar-root":  {
       color: 'white'
     },
     "& div.MuiTablePagination-actions":{
       color: 'white'
+    },
+    "& div.MuiIconButton-label" :{
+      color: 'white'
+    },
+    "& div.MuiDataGrid-colCellWrapper" :{
+      backgroundColor: 'white'
     }
   }
 }));
