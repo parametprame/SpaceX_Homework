@@ -1,9 +1,7 @@
 import { useQuery } from 'react-query';
 import React, { lazy, Suspense } from 'react';
-import { Link } from "react-router-dom";
-import { faRocket } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NotFound from '../components/404'
+import Section2 from '../View/SectionRocket2'
 
 const SectionRocket1 = lazy(() => import('../View/SectionRocket1'))
 const SectionRocket2 = lazy(() => import('../View/SectionRocket2'))
@@ -20,7 +18,6 @@ const Rocketpage = () => {
 
     if (error) return 'An error has occurred: ' + error.message
     const RenderRocket = () => {
-        console.log(data)
         const image = [
             "https:i.ytimg.com/vi/oFQQjthZfA4/maxresdefault.jpg",
             "https://cnet3.cbsistatic.com/img/hw-r4jFpdqaFotM6vYXIc0IQ8jQ=/1200x675/2020/07/13/0be85427-bec6-4d86-b94a-fd6df0f463ae/49956396622-84891c5192-3k.jpg",
@@ -41,7 +38,7 @@ const Rocketpage = () => {
                                         <div className='col textabout'>
                                             <p style={{ fontSize: '2em', fontWeight: 'bold' }} >{data.rocket_name} </p>
                                             <h6 >{data.description}</h6>
-                                            <Link type="button" className="btn btn-outline-light waves-effect my-2 btn-lg" to={{pathname: `/Rockets/detail/${data.rocket_id}`}}  ><FontAwesomeIcon icon={faRocket} />{' '}See more</Link>
+                                            <Section2 data={data.rocket_id}/>
                                         </div>
                                     </div>
                                 </div>
@@ -55,7 +52,6 @@ const Rocketpage = () => {
     return (
         <React.Fragment style={{ top: 0 }}>
             <Suspense fallback={<h1>Still Loading…</h1>}>
-                <SectionRocket2/>
                 <SectionRocket1 />
                 {RenderRocket()}
             </Suspense>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DataGrid } from '@material-ui/data-grid';
+import { buildRowParams, DataGrid } from '@material-ui/data-grid';
 import { useQuery } from 'react-query';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -59,12 +59,18 @@ export default function Listlunches() {
     })
   }
 
+  const handleClick = (e) => {
+    const row = datalist.filter((r) => r.id === e.row.id)
+  }
+
   return (
     <div style={{ height: '80vh', width: '100%', backgroundColor:'white', }} >
       <DataGrid
         rows={datalist} 
         columns={columns} 
-        pageSize={9}
+        autoPageSize 
+        pagination
+        onRowClick={handleClick}
       />
     </div>
   );

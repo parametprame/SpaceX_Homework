@@ -1,9 +1,21 @@
 import 'aos/dist/aos.css';
 import React from 'react'
 import { Button } from '@material-ui/core'
-const SectionRocket2 = () => {
+import { useQuery } from 'react-query';
+
+const SectionRocket2 = (props) => {
+    const rocket_id = props.data
+    const { isLoading, error, data } = useQuery(['rocket_id', rocket_id], () =>
+        fetch(`https://api.spacexdata.com/v3/rockets/${rocket_id}`).then(res =>
+            res.json()
+        )
+    )
+    if (isLoading) return 'Loading...'
+    if (error) return 'An error has occurred: ' + error.message
+
+    console.log(data)
     return (
-        <section id='det'>
+        <React.Fragment>
             <div className="detail" style={{ display: 'flex' }}>
                 <div className='container' style={{ marginTop: '10%' }}>
                     <button
@@ -24,7 +36,7 @@ const SectionRocket2 = () => {
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Falcon 1</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">{data.rocket_name}</h5>
                                     <button
                                         type="button"
                                         class="btn-close"
@@ -40,7 +52,7 @@ const SectionRocket2 = () => {
                                                     <tbody style={{ fontSize: '1em', fontWeight: 'normal', color: 'black' }}  >
                                                         <tr style={{ border: '2%' }}>
                                                             <th align='left'>HEIGHT</th>
-                                                            <td align='right'>70 m/ 229.6 ft </td>
+                                                            <td align='right'> {data.rocket_name}m/ 229.6 ft </td>
                                                         </tr>
                                                         <tr>
                                                             <th align='left'>DIAMETER</th>
@@ -92,7 +104,7 @@ const SectionRocket2 = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </React.Fragment>
     )
 }
 export default SectionRocket2

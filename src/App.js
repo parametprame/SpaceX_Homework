@@ -24,7 +24,7 @@ const AsyncLaunches = Loadable({
   loader: () => import('./pages/Launches')
 })
 const AsyncRocketDetail = Loadable({
-  loader: () => import('./pages/RocketDetail')
+  loader: () => import('./View/SectionRocket2')
 })
 
 
