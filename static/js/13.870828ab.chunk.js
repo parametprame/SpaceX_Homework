@@ -1,0 +1,2 @@
+(this.webpackJsonpspacexhomework=this.webpackJsonpspacexhomework||[]).push([[13],{207:function(e,c,t){"use strict";t.r(c);t(82);var s=t(0),a=t.n(s),r=t(67),i=t(5);c.default=function(){return Object(i.jsx)(a.a.Fragment,{children:Object(i.jsx)("section",{id:"aboutrocket",children:Object(i.jsx)("div",{className:"viewaboutrocket",children:Object(i.jsx)(r.a,{children:Object(i.jsx)("div",{className:"textrocket","data-aos":"fade-up",children:Object(i.jsx)("p",{children:"ROCKETS"})})})})})})}}}]);
+//# sourceMappingURL=13.870828ab.chunk.js.map

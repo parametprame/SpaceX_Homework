@@ -1,0 +1,2 @@
+(this.webpackJsonpspacexhomework=this.webpackJsonpspacexhomework||[]).push([[18],{205:function(e,n,t){"use strict";t.r(n);var c=t(0),s=t.n(c),l=t(5),r=Object(c.lazy)((function(){return t.e(9).then(t.bind(null,152))})),i=Object(c.lazy)((function(){return Promise.all([t.e(0),t.e(4),t.e(15)]).then(t.bind(null,166))}));n.default=function(){return Object(l.jsx)(s.a.Fragment,{children:Object(l.jsxs)(c.Suspense,{fallback:Object(l.jsx)("h1",{children:"Still Loading\u2026"}),children:[Object(l.jsx)(r,{}),Object(l.jsx)(i,{})]})})}}}]);
+//# sourceMappingURL=18.090fc9f3.chunk.js.map
